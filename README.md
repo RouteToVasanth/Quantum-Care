@@ -334,20 +334,20 @@ Step 3: **Run command prompt as administator on your system**:
 
 Follow these steps in Windows PowerShell (run as Administrator) to install DCMTK:
 
-Step 1:**Set the Execution Policy**
+Step 1: **Set the Execution Policy**
 - This step ensures that you can run scripts on your system.
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force
    ```
 
-Step 2:**Install Chocolatey**
+Step 2: **Install Chocolatey**
 - Install Chocolatey, which you will use to install DCMTK. The following command sets the security protocol for the current session and installs Chocolatey from its official website.
    ```powershell
    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    ```
 
-Step 3:**Install DCMTK Using Chocolatey**
+Step 3: **Install DCMTK Using Chocolatey**
 - Once Chocolatey is installed, you can install DCMTK using the following command:
    ```powershell
    choco install dcmtk
