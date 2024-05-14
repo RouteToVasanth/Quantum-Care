@@ -1,0 +1,926 @@
+/* Main application container, centers content and sets the font for consistent typography across the app. */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* A more neutral, widely-used font */
+}
+
+/* Adjusting the logo spin animation for a more subtle effect */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 50s linear; /* Slowing down the animation */
+}
+
+/* Subtle animation for users who don't prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 50s linear;
+  }
+}
+/* Styles for the header of the application, setting the background color and aligning items centrally. */
+.App-header {
+  background-color: #005eb8;
+  min-height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: static; 
+}
+
+/* Styles for the brand in the navbar, ensuring the logo image fits well within the navigation bar. */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar-brand img {
+  height: auto;  
+  width: auto;   
+  max-height: 60px; 
+  max-width: 100%; 
+}
+
+/* Basic navbar styling, providing padding and layout configuration for navigation elements. */
+.navbar {
+  padding: 0.5rem 1rem; 
+}
+
+/* Link styling within the app, providing a clear visual transition on hover to indicate interactivity. */
+.App-link {
+  color: #ffffff; /* Adjusting for better visibility */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.App-link:hover {
+  color: #61dafb; /* Light blue for hover, adding interactivity */
+}
+
+/* Keyframes for the logo spin animation, creating a continuous rotation effect. */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Adding basic global styles for a consistent look */
+body {
+  background-color: #f4f4f4; /* Lighter background for the overall page */
+  color: #333; /* Dark grey for text, improving readability */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Ensuring font consistency */
+}
+
+/* Enhancing readability and spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0; /* Adding more space around headings */
+  color: #005eb8; /* Using the same blue for headings for consistency */
+}
+
+p {
+  line-height: 1.6; /* Improving line spacing for paragraph text */
+}
+
+/* Improving the form fields visibility */
+.form-control {
+  border: 1px solid #ced4da;
+  color: #495057;
+  background-color: #fff;
+}
+
+/* Updating button styles for better visibility */
+/* Style for primary button to make it stand out */
+.btn-primary {
+  background-color: #4CAF50; /* Green color for submit button */
+  color: white;
+}
+
+/* Style for secondary button */
+.btn-secondary {
+  background-color: #f0ad4e; /* Orange color for transfer button */
+  color: white;
+}
+
+/* Style for danger button */
+.btn-danger {
+  background-color: #FF0000; /* Orange color for transfer button */
+  color: white;
+}
+
+/* Flexbox configuration for department-specific buttons, centering and aligning them within their container for visual consistency. */
+.department-buttons {
+  display: flex;
+  justify-content: center; /* Center align the buttons */
+  align-items: center; /* Vertically center */
+}
+
+/* Individual department button styling, focusing on layout without adding borders or backgrounds to maintain a clean look. */
+.department-button {
+  display: flex;        
+  justify-content: center; 
+  gap: 30px;            
+}
+.department-button button {
+  border: none;
+  background: none;
+}
+
+/* Ensures department images within buttons are appropriately sized and react to user interactions with a visual change. */
+.department-button img {
+  width: 350px; 
+  height: auto; 
+  display: block; 
+}
+
+.department-button button:hover {
+  opacity: 0.8;
+}
+
+/* Informational button styling, providing a visual cue for interactive elements that offer additional information or actions. */
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+}
+
+/* General button styling, setting dimensions, spacing, and interactive effects to enhance user experience. */
+.btn {
+  margin: 0.5rem; /* Adjusted margin for spacing */
+  padding: 0.5rem 1rem; /* Standard padding */
+  border-radius: 0.25rem; /* Rounded corners */
+  font-size: 1rem; /* Appropriate text size */
+  transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+}
+
+/* Ensure images inside buttons have consistent sizing */
+.btn img {
+  width: 100px; /* Fixed width for images */
+  height: 100px; /* Fixed height for images */
+  object-fit: contain; /* Keep aspect ratio of images */
+}
+
+/* Hover effects for buttons for better interactivity */
+.btn:hover {
+  opacity: 0.8; /* Slight opacity change on hover for feedback */
+}
+
+/* NewPatient.css */
+.form-container {
+  background-color: #fff; /* White background for the form container */
+  padding: 2rem; /* Padding inside the form container */
+  border-radius: 8px; /* Rounded corners for the form container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form container */
+  margin: 2rem auto; /* Margin to center the form container */
+  max-width: 800px; /* Max width of the form to prevent it from being too wide on larger screens */
+  position: relative; /* To ensure the form is positioned correctly */
+  z-index: 1; /* Make sure the form is above other elements */
+}
+
+.form-container h1, .form-container h4 {
+  color: #333; /* Ensuring the title and subtitles are readable */
+  margin-bottom: 20px; /* Adding space below headings */
+}
+
+.form-control {
+  border: 1px solid #ced4da; /* Add or ensure border for inputs for visibility */
+  color: #495057; /* Color of the text inside inputs */
+  margin-bottom: 15px; /* Add space below each input */
+}
+
+.new-patient-wrapper {
+  padding-top: 650px; /* Adjust this value to the height of your navbar */
+}
+
+.btn {
+  padding: 10px 20px; /* Uniform padding */
+  font-size: 16px; /* Uniform font size */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded borders */
+  margin-right: 10px; /* Space between buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* login */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f4f4f4; /* or any other light color you prefer */
+}
+
+/* Card styling for the login form, providing visual boundaries and shadow for depth */
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header styling within the login form, colored to match the brand's theme */
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #005eb8; 
+}
+
+/* Style adjustments for input fields in the login form, setting height for better touch interaction */
+.form-control {
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  height: 45px; 
+}
+
+/* Primary button styling in the login form, using brand colors for consistency */
+.btn-primary {
+  background-color: #005eb8;
+  border-color: #005eb8;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Style for the forgot-password link, aligned to the right for standard placement */
+.forgot-password {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Flex layout for the signup container, centering content similarly to the login container */
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+/* Card styling for the signup form, mirroring the style of the login card for consistency */
+.signup-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header styling within the signup form, maintaining brand color consistency */
+.signup-form h2 {
+  margin-bottom: 1.5rem;
+  color: #005eb8;
+}
+
+/* Additional styling for input fields within the signup form, consistent with the login form */
+.signup-form .form-control {
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  height: 45px;
+}
+
+/* Primary button styling within the signup form, consistent with other primary buttons */
+.signup-form .btn-primary {
+  background-color: #005eb8;
+  border-color: #005eb8;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Layout adjustments for the existing patient container, centering it within the viewport */
+.existing-patient-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card styling for the existing patient search form, visually distinct to highlight its functionality */
+.existing-patient-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+/* Flex layout for the existing patient form, organizing content vertically for a clear flow */
+.existing-patient-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling for the existing patient form, providing a clear label for the form's purpose */
+.existing-patient-form h2 {
+  margin-bottom: 20px;
+}
+
+/* Margin adjustments for form fields within the existing patient form, providing space between inputs */
+.existing-patient-form .col-md-4 {
+  margin-bottom: 20px;
+}
+
+/* Bold styling for labels within the existing patient form, emphasizing the input descriptions */
+.existing-patient-form label {
+  font-weight: bold;
+}
+
+/* Border and padding styling for input fields within the existing patient form, enhancing usability */
+.existing-patient-form .form-control {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Focus style for input fields within the existing patient form, highlighting active elements */
+.existing-patient-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Grid layout for buttons within the existing patient form, ensuring they are evenly spaced */
+.existing-patient-form .d-grid {
+  margin-top: 20px;
+}
+
+/* Primary button styling within the existing patient form, consistent with other primary button styles */
+.existing-patient-form .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the primary button in the existing patient form, providing visual feedback */
+.existing-patient-form .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Detailed styling for the display details section, managing overflow and ensuring it doesn't extend beyond the viewport */
+.patient-details-section {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+/* Card styling for displaying patient details, ensuring content is well presented and manageable */
+.patient-details-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative; 
+  max-height: calc(100vh - 100px); 
+  overflow-y: auto; 
+  margin-bottom: 10px;
+}
+
+/* Styling for text details within the patient card, ensuring clarity and emphasis */
+.patient-detail {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Toolbar styling for action buttons, ensuring they are accessible and clearly presented */
+.button-toolbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+/* Individual button styling within the toolbar, managing spacing and presentation */
+.button-toolbar .btn {
+  margin-right: 10px;
+}
+
+/* Last button in toolbar should not have margin on the right */
+.button-toolbar .btn:last-child {
+  margin-right: 0;
+}
+
+/* Styles for primary and secondary buttons to ensure they are displayed inline-flex with center alignment. */
+.btn-primary, .btn-secondary {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+/* Sets a standard height for input group text and form controls to maintain uniformity across different form elements. */
+.input-group-text, .form-control {
+  height: 38px; /* Standard height */
+}
+
+/* Ensures that form select elements and form controls expand to the full width of their container for consistency. */
+.form-select, .form-control {
+  width: 100%; /* Full width */
+}
+
+/* Flexbox container setup for editing patient details, ensuring the form is centered vertically and horizontally. */
+.edit-patient-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card style for the edit patient form including background color, padding, and shadows for depth. */
+.edit-patient-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+/* Layout for the edit patient form fields arranged in a column. */
+.edit-patient-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for headers within the edit patient form to separate sections visually. */
+.edit-patient-form h1 {
+  margin-bottom: 20px;
+}
+
+/* Margins for medium columns in the edit patient form to space out the input fields. */
+.edit-patient-form .col-md-6,
+.edit-patient-form .col-md-4 {
+  margin-bottom: 20px;
+}
+
+/* Bold labels for clearer readability and emphasis within the edit patient form. */
+.edit-patient-form label {
+  font-weight: bold;
+}
+
+/* Standard styling for form controls to include padding, border, and a focus highlight for accessibility. */
+.edit-patient-form .form-control {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Enhanced focus state with a blue glow for form controls to indicate active input areas. */
+.edit-patient-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Grid layout for action buttons to ensure they are spaced evenly and accessible. */
+.edit-patient-form .d-grid {
+  margin-top: 20px;
+}
+
+/* Primary button styling for actions within the edit patient form, including color and hover effects. */
+.edit-patient-form .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect to darken the primary button on mouse over for interactive feedback. */
+.edit-patient-form .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Additional padding above the edit patient form to account for fixed elements like a navbar. */
+.edit-patient-wrapper {
+  padding-top: 300px; /* Adjust this value to the height of your navbar */
+}
+
+/* Transparent edit button positioned absolutely within the edit patient card for quick access. */
+.edit-patient-btn {
+  background-color: transparent;
+  color: #007bff; /* Bootstrap primary color for edit button */
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  padding: 8px;
+}
+
+/* Flexbox layout for patient action buttons to align them properly and evenly space them. */
+.patient-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* Larger primary and secondary buttons with consistent padding and font size for usability. */
+.btn-primary.btn-lg, .btn-secondary {
+  padding: 0.5rem 1rem; /* Adjust padding to make buttons the same size */
+  font-size: 1rem; /* Adjust font size for consistency */
+}
+
+/* Modal overlay to focus attention by providing a semi-transparent background and centering the modal. */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better focus on the modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to ensure it's above other elements */
+}
+
+/* Modal content styling with white background, padding, and a slight shadow for a clean and focused presentation. */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: auto; /* Let the content dictate the size */
+  max-width: 500px; /* Limit the size to ensure it's not too wide */
+  margin: 0 20px;
+  border-radius: 10px; /* Slightly larger border-radius */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center; /* Center the content */
+  z-index: 1001; /* Above the overlay */
+}
+
+
+/* Styles for confirm and cancel buttons with visual cues for positive and negative actions respectively. */
+.confirm-button, .cancel-button {
+  background-color: #4CAF50; /* Green for confirm */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.cancel-button {
+  background-color: #f44336; /* Red for cancel */
+}
+
+/* Custom alignment for icons within buttons to ensure visual consistency. */
+.react-bootstrap-icons {
+  vertical-align: -0.125em;
+}
+
+/* Overall styles for displaying patient details and DICOM images in a responsive, scrollable layout. */
+.patient-details-section {
+  max-height: 100vh;
+  overflow: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive flexbox layout for patient details and DICOM images ensuring they are displayed side by side. */
+.details-layout {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Common styling for containers holding DICOM images and patient details, enhancing readability and aesthetics. */
+.details-dicom,
+.details-info {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-basis: calc(50% - 40px);
+  max-width: calc(50% - 40px);
+  box-sizing: border-box;
+}
+
+/* Style enhancements for DICOM images to ensure they are displayed appropriately across devices. */
+.details-dicom img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styling for patient details text to ensure clarity and legibility. */
+.details-info .info-card-body p {
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* Layout styling for action buttons to make them easily accessible and neatly arranged. */
+.details-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Style definitions for primary and secondary action buttons to distinguish between different actions. */
+.btn-primary,
+.btn-secondary {
+  background-color: #4CAF50; /* Green for primary actions */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background-color: #f0ad4e; /* Orange for secondary actions */
+}
+
+/* Hover effects for buttons to enhance user interaction feedback. */
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Styles for dropdowns within submit and transfer options to ensure they are fully functional and easy to use. */
+.form-select {
+  padding: .375rem .75rem;
+  height: auto;
+}
+
+.form-select option {
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  max-height: none;
+}
+
+/* Container styling for submit and transfer options ensuring they are visually appealing and well-defined. */
+.submit-options-container,
+.transfer-options-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Uniform styling for input groups to enhance the layout and usability of form elements. */
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.input-group-text {
+  padding: 10px 12px;
+}
+
+/* Centered layout for OHIF viewer button, making it prominent and easily accessible. */
+.view-ohif-button-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.btn.view-ohif {
+  background-color: #007bff; /* Blue for visibility */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn.view-ohif:hover {
+  background-color: #0056b3; /* Darker blue on hover for visual feedback */
+}
+
+/* Responsive adjustments for smaller screens to ensure the DICOM and patient details are displayed correctly. */
+@media (max-width: 768px) {
+  .details-dicom,
+  .details-info {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .details-buttons,
+  .submit-options-container,
+  .transfer-options-container {
+    flex-direction: column;
+  }
+}
+
+
+/* Establishes a modal overlay, fixing it across the entire viewport, providing a semi-transparent background for focus on modal content. */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Defines the style for modal content boxes, centering text, and adding shadows for depth. */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 1001;
+}
+
+/* Styles for the confirm and cancel buttons in the modal, using vivid colors to denote action types and ensuring they are clickable. */
+.confirm-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* Patient type container styling for a distinctive and approachable interface, optimized for various screen sizes. */
+.patient-type-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Primary button styling for prominent, interactive elements in the patient type interface. */
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+/* Full-width block button styling to enhance mobile responsiveness and usability. */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Responsive settings to adjust padding and font sizes for better usability on smaller devices. */
+@media (max-width: 768px) {
+  .patient-type-container {
+    padding: 10px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* Emergency discharge button with clear visual cues and accessibility considerations. */
+  .discharge-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* DICOM image grid layout for optimal viewing across devices, with flexible sizing and margins. */
+.dicom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+/* DICOM image styling to ensure images are scaled appropriately without distortion, with a focus on accessibility. */
+.dicom-image {
+  flex-grow: 1;
+  max-width: 100%;
+  height: auto;
+  min-width: calc(25% - 10px);
+  max-height: 200px;
+}
+
+/* Additions to your App.css for various UI enhancements including animations, transformations, and focus enhancements. */
+.fade-in-effect {
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Defines a fade-in animation from transparent to fully visible, enhancing UI transitions. */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Enhances button interactivity by lifting and casting a shadow on hover, providing a tactile feedback impression. */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus state for form controls increases visibility and accessibility by emphasizing the border and shadow. */
+.form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+/* Adds a subtle scale transformation to cards on hover, providing a dynamic, engaging user experience. */
+.card-hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Spinner animation for loading indicators, rotating continuously to signify ongoing processes. */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left_color: #4CAF50; /* Note: This should be 'border-left-color' for proper CSS syntax */
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframe for spinner animation, ensuring smooth and endless rotation. */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build directories
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Miscellaneous
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore node_modules in any subdirectory
+**/node_modules
+
+# Ignore build directories in any subdirectory
+**/dist
+**/build
