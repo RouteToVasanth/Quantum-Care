@@ -277,27 +277,27 @@ Step 2: **Connect to MongoDB Using Mongoose**:
 
    - Set the path for department images:
      ```plaintext
-     Update `app.use('/department-images', logImageAccess, express.static(path.join('C:\\Users\\Dell\\Desktop\\Quantum-Care\\Frontend\\src\\Department-Images')));`
+     Update `app.use('/department-images', logImageAccess, express.static(path.join('C:\\Users\\win10\\Desktop\\Quantum-Care\\Frontend\\src\\Department-Images')));`
      ```
 
    - Set the path for the PDF directory:
      ```plaintext
-     Update `const pdfDirectory = 'C:\\Users\\Dell\\Desktop\\Quantum-Care\\Server\\Patient-Pdfs';`
+     Update `const pdfDirectory = 'C:\\Users\\win10\\Desktop\\Quantum-Care\\Server\\Patient-Pdfs';`
      ```
 
    - Set the path for the image directory:
      ```plaintext
-     Update `const imageDirectory = 'C:\\Users\\Dell\\Desktop\\Quantum-Care\\Server\\Annotated-Images';`
+     Update `const imageDirectory = 'C:\\Users\\win10\\Desktop\\Quantum-Care\\Server\\Annotated-Images';`
      ```
 
    - Set the path for the logo image used in PDF generation:
      ```plaintext
-     Update `doc.image('C:\\Users\\Dell\\Desktop\\Quantum-Care\\Server\\ICO.png', 50, 20, { width: 100 });`
+     Update `doc.image('C:\\Users\\win10\\Desktop\\Quantum-Care\\Server\\ICO.png', 50, 20, { width: 100 });`
      ```
 
    - Add logging middleware for image access attempts:
      ```plaintext
-     Update `app.use('/images', (req, res, next) => { console.log('Access attempt for image:', req.url); next(); }, express.static('C:\\Users\\Dell\\Desktop\\Quantum-Care\\Server\\Annotated-Images'));`
+     Update `app.use('/images', (req, res, next) => { console.log('Access attempt for image:', req.url); next(); }, express.static('C:\\Users\\win10\\Desktop\\Quantum-Care\\Server\\Annotated-Images'));`
      ```
 ## Install Dependencies
 Step 1: **Navigate to Server folder of the Project file on the command prompt**:
