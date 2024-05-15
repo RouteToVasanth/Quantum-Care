@@ -10,6 +10,16 @@ Quantum Care Aims To Simulate a Typical Imaging Workflow As Seen In The Radiolog
   </p>
 </div>
 
+![StaffLogin](https://github.com/RouteToVasanth/Quantum-Care/assets/160739091/7a75f330-89fc-4e7c-9e86-2f0b3849b831)
+
+![NewPatient](https://github.com/RouteToVasanth/Quantum-Care/assets/160739091/0a7fd887-470e-4f54-ae3d-1e5d11d596b3)
+
+![Physician Display](https://github.com/RouteToVasanth/Quantum-Care/assets/160739091/de552025-0af5-44d6-8da9-60e487185df2)
+
+![OHIF Viewer](https://github.com/RouteToVasanth/Quantum-Care/assets/160739091/cfdae700-71cb-4c5e-b8b7-25bbec37e96a)
+
+![PatientReport](https://github.com/RouteToVasanth/Quantum-Care/assets/160739091/53829c04-632e-4851-a68b-0db0d372de67)
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
